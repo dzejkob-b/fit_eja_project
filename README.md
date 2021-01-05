@@ -1,6 +1,6 @@
 # Semestrální práce BIK-EJA
 
-Repozitář semestrální práce předmětu BIK-EJA. Autor: Jakub Hrabálek, hrabajak@fit.cvut.cz
+Repozitář semestrální práce předmětu BIK-EJA.
 
 ## Popis a vlastnosti projektu
 
