@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <!-- testovaci conf -->
+    <persistence-unit name="persistenceUnit" transaction-type="JTA">
+
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+        <!--
+        <class>cz.cvut.fit.hrabajak.semestralka.orm.Product</class>
+        -->
+
+        <properties>
+
+            <property name="hibernate.archive.autodetection" value="class, hbm"/>
+            <!-- testovaci konfigurace je in-memory -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:test"/>
+
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+            <property name="javax.persistence.jdbc.user" value=""/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <!-- transakce managovany rucne -->
+            <property name="hibernate.connection.autocommit" value="false"/>
+
+            <!-- testovaci konfigurace zobrazuje sql -->
+            <property name="hibernate.show_sql" value="true"/>
+
+            <!-- automaticke ddl v sql - vcetne aktualizace struktury -->
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+
+        </properties>
+
+    </persistence-unit>
+</persistence>
